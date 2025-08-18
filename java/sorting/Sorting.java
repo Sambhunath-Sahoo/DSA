@@ -1,4 +1,4 @@
-package SortingAlgos;
+package sorting;
 
 public class Sorting {
 

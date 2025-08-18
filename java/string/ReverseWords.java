@@ -1,36 +1,17 @@
 import java.util.*;
 
-public class Questions {
-
-    public static String removeOuterParentheses(String str) {
-        String ans = "";
-        int counter = 0;
-        for (char ch : str.toCharArray()) {
-            if (ch == '(') {
-                if (counter > 0) {
-                    ans += "(";
-                }
-                counter++;
-            } else if (ch == ')') {
-                counter--;
-                if (counter > 0) {
-                    ans += ")";
-                }
-            }
-        }
-        return ans;
-    }
-
+public class ReverseWords {
     public static String reverseWords(String s) {
-
+        s = s.trim();
         Stack<String> st = new Stack<>();
-
         String temp = "";
         for (int i = 0; i < s.length(); i++) {
             if (s.charAt(i) != ' ') {
                 temp += s.charAt(i);
             } else if (s.charAt(i) == ' ') {
-                st.push(temp);
+                if (temp != "") {
+                    st.push(temp);
+                }
                 temp = "";
             }
         }
@@ -52,7 +33,6 @@ public class Questions {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         String str = sc.nextLine();
-        // String ans = removeOuterParentheses(str);
         String ans = reverseWords(str);
         System.out.println(ans);
         sc.close();
