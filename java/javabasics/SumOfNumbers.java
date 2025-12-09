@@ -6,7 +6,6 @@ public class SumOfNumbers {
         Scanner sc = new Scanner(System.in);
         int[] numbers = new int[5];
 
-        System.out.println("Enter 5 Number");
         for (int i = 0; i < 5; i++) {
             numbers[i] = sc.nextInt();
         }
@@ -35,11 +34,9 @@ public class SumOfNumbers {
         System.out.println(str.charAt(str.length() - 1));
     }
 
-
-
     public static void main(String[] args) {
-//        sumFirstAndLast();
-//        printXNNumberofTimes();
-        printLastCharOfString();
+        sumFirstAndLast();
+        // printXNNumberofTimes();
+        // printLastCharOfString();
     }
 }
