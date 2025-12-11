@@ -1,3 +1,6 @@
 java/build/
 cpp/build/
 python/build/
+java/.idea
+java/DSA.iml
+java/out
